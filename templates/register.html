@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="register-form">
+    <h2>Register</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="pin">4-digit PIN:</label>
+            <input type="password" id="pin" name="pin" pattern="\d{4}" required>
+        </div>
+        <div class="form-group">
+            <label for="pin_confirm">Confirm PIN:</label>
+            <input type="password" id="pin_confirm" name="pin_confirm" pattern="\d{4}" required>
+        </div>
+        <div class="form-group">
+            <label for="initial_balance">Initial Balance:</label>
+            <input type="number" step="0.01" id="initial_balance" name="initial_balance" value="0" min="0">
+        </div>
+        <button type="submit" class="btn-submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+</div>
+{% endblock %}

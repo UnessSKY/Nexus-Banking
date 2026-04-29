@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ user_name }}!</h2>
+<div class="balance-section">
+    <h3>Current Balance: DH{{ "%.2f"|format(current_balance) }}</h3>
+
+</div>
+
+<div class="recent-transactions">
+    <h3>Recent Transactions</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tx in transactions %}
+            <tr>
+                <td>{{ tx.transaction_date }}</td>
+                <td>{{ tx.description }}</td>
+                <td>{{ tx.location_type or 'N/A' }}</td>
+                <td class="{{ 'positive' if tx.amount > 0 else 'negative' }}">
+                    {{ "%+.2f"|format(tx.amount) }}
+                </td>
+                <td>{{ "%.2f"|format(tx.new_balance) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Add Transaction{% endblock %}
+
+{% block content %}
+<div class="transaction-form">
+    <h2>Add New Transaction</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" step="0.01" id="amount" name="amount" required>
+            <small>Positive for deposits, negative for withdrawals</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="location_type">Location Type:</label>
+            <select id="location_type" name="location_type">
+                <option value="">Select...</option>
+                <option value="online">Online</option>
+                <option value="supermarket">Supermarket</option>
+                <option value="physical">Physical Store</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn">Add Transaction</button>
+        <a href="{{ url_for('dashboard') }}" class="btn cancel">Cancel</a>
+    </form>
+</div>
+{% endblock %}

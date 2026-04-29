@@ -1,0 +1,319 @@
+/* Navigation */
+/* Navigation Bar Customization */
+nav {
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 8px rgba(60, 60, 120, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 22px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    display: inline-block;
+}
+
+nav a:hover, nav a:focus {
+    background: #fff;
+    color: #4e54c8;
+    box-shadow: 0 2px 8px rgba(60, 60, 120, 0.10);
+    text-decoration: none;
+    outline: none;
+}
+
+/* Transaction Form */
+.transaction-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn.cancel {
+    background: #f44336;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Alerts */
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.alert-error {
+    background: #ffdddd;
+    color: #d8000c;
+}
+
+.alert-success {
+    background: #ddffdd;
+    color: #4F8A10;
+}
+
+
+
+/* General body styles */
+body {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Container for main content */
+.container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15);
+    padding: 2.5rem 2rem;
+}
+
+/* Navigation bar */
+nav {
+    background: #333;
+    padding: 12px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Login and Register Form Styles */
+.login-form, .register-form {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.login-form h2, .register-form h2 {
+    text-align: center;
+    color: #4e54c8;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background: #f8f8ff;
+}
+
+.form-group input:focus {
+    border-color: #4e54c8;
+    outline: none;
+}
+
+.btn-submit, .btn {
+    width: 100%;
+    padding: 11px 0;
+    background: #4e54c8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover, .btn:hover {
+    background: #3b3f99;
+}
+
+.btn.cancel {
+    background: #f44336;
+}
+
+.btn.cancel:hover {
+    background: #c62828;
+}
+
+/* Links below forms */
+.login-form p, .register-form p {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.98rem;
+}
+
+.login-form a, .register-form a {
+    color: #4e54c8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-form a:hover, .register-form a:hover {
+    text-decoration: underline;
+}
+
+/* Alert messages */
+.alert {
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.alert-error {
+    background: #ffdddd;
+    color: #d8000c;
+}
+
+.alert-success {
+    background: #ddffdd;
+    color: #4F8A10;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .container {
+        padding: 1.2rem 0.5rem;
+    }
+    .login-form, .register-form {
+        max-width: 100%;
+    }
+}
+
+
+/* Dashboard Table Styles */
+.recent-transactions {
+    margin-top: 2.5rem;
+}
+
+.recent-transactions table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: #f8f8ff;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1.08rem;
+    box-shadow: 0 2px 12px rgba(60, 60, 120, 0.08);
+}
+
+.recent-transactions th, .recent-transactions td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    word-break: break-word;
+}
+
+.recent-transactions th {
+    background: #4e54c8;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.recent-transactions tr:last-child td {
+    border-bottom: none;
+}
+
+.recent-transactions td.positive {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.recent-transactions td.negative {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* Make container wider for dashboard */
+.container {
+    max-width: 1000px;
+}
+
+/* Responsive: allow horizontal scroll on small screens */
+@media (max-width: 1100px) {
+    .container {
+        max-width: 98vw;
+        padding: 0.5rem;
+    }
+    .recent-transactions table {
+        min-width: 600px;
+        font-size: 1rem;
+    }
+    .balance-section {
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .recent-transactions table {
+        min-width: 400px;
+        font-size: 0.97rem;
+    }
+}
