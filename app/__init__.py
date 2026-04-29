@@ -3,6 +3,7 @@ import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
 import functools
 from datetime import datetime
+import os
 
 
 
@@ -10,8 +11,7 @@ app = Flask(__name__)
 app.secret_key = 'your-secret-key-123'  # Change this in production!
 
 # Database Configuration
-import os
-DATABASE = os.path.join(os.path.dirname(__file__), 'bank.db')
+DATABASE = os.path.join(os.path.dirname(__file__), '..', 'bank.db')
 
 def get_db():
     """Get a database connection"""
