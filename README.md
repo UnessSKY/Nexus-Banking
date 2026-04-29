@@ -1,4 +1,4 @@
-# FlaskVault - Banking System
+# Nexus-Banking
 
 A secure, feature-rich Flask web application for managing bank accounts with user authentication, balance tracking, and transaction history.
 
