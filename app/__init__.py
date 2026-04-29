@@ -52,6 +52,21 @@ def init_db():
             );
         ''')
         conn.commit()
+        
+        # Add test user if none exists
+        cursor = conn.cursor()
+        if not cursor.execute("SELECT 1 FROM users WHERE email='test@example.com'").fetchone():
+            pin_hash = generate_password_hash("1234")
+            cursor.execute(
+                "INSERT INTO users (name, email, pin_hash) VALUES (?, ?, ?)",
+                ("Test User", "test@example.com", pin_hash)
+            )
+            user_id = cursor.lastrowid
+            cursor.execute(
+                "INSERT INTO accounts (user_id, balance) VALUES (?, ?)",
+                (user_id, 1000.0)
+            )
+            conn.commit()
 
 # Initialize database before first request
 init_db()
